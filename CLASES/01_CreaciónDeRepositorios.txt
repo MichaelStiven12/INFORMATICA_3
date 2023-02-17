@@ -1,0 +1,13 @@
+17 - 02 - 2023
+
+CREACION DE REPOSITORIOS.
+
+Para crear un repositorio local se debe primero crear la carpeta que lo va a contener,
+luego desde Visual Studio Code vamos a ir a la sección File y seleccionaremos Open Folder, una vez seleccionada la carpeta iremos a 
+Source Control y luego al boton de Initialize Repository y darle un nombre en la parte superior de la interfaz, 
+para enlazarlo a la nube primero se debe asociar la cuenta de GitHub con el computador para poder actualizar el repositorio, para esto se escriben los comandos:
+
+git config --global user.name "Usuario"
+git config --global user.email "Correo"
+
+Una vez hecho esto se podran subir los archivos al respositorio despues de pasar por el Stage Area y poner un comentario.
