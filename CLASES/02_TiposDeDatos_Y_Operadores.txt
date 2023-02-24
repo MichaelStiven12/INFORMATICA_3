@@ -18,6 +18,8 @@ Conjuntos:      {"A", "B", "C", "D"} (a diferencia de los diccionarios estos sol
 
 OPERADORES:
 
+Asignacion:     = (a = 3, b = "hola")
 Aritmeticos:    +, -, *, /, // (Division entera), % (Modulo de la division), ** (Potencia)
 Logicos:        and (True and True => True), or (False or False => Flase), not (not False => True)
-Comparativos:   
+Comparativos:   > (3 > 5 => False), >= (3 >= 3 => True), < (-10 < 0 => True), <= (-10 <= 10 => True), == ("hola" == "hola " => False), != ("hola" != "hola " => True)
+Pertenencia:    in (1 in [1,2,3] => True), not in (1 not in [1,2,3] => False) 
