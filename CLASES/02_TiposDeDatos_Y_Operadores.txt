@@ -18,3 +18,6 @@ Conjuntos:      {"A", "B", "C", "D"} (a diferencia de los diccionarios estos sol
 
 OPERADORES:
 
+Aritmeticos:    +, -, *, /, // (Division entera), % (Modulo de la division), ** (Potencia)
+Logicos:        and (True and True => True), or (False or False => Flase), not (not False => True)
+Comparativos:   
