@@ -1,0 +1,43 @@
+03 - 03 - 2023
+
+METODOS:
+
+Todos los tipos de datos en phyton son objetos. Y cada objeto tiene sus respectivos metodos.
+
+metodo (Dirigido solo a cierto tipo de datos) = Funcion (Mas general)
+
+¿Como ejecutar mdtodos?
+
+objeto.<metodo>()
+
+Ejemplos:
+            lista.append(100)   ==> Agrega el argumento a una lista
+            cadena.upper()      ==> Devuelve la cadena en mayusculas
+            diccionario.keys()  ==> Devuelve las claves de un diccionario en una lista
+
+    
+METODOS DE LOS STRINGS
+
+formateo:       capitalize(), upper(), lower(), title(), center(), strip()
+
+operaciones:    count(subcadena), replace(old, new), find(subcadena)
+
+verificaciones: isalpha(), isalnum(), isdigit(), isdecimal()
+
+indexing:       iterable[indice]
+
+slicing:        iterable[inicio: fin: salto]
+
+
+METODOS DE LAS LISTAS:
+
+Operaciones: append(valor), remove(valor), pop(indice)
+             insert(indice, valor), count()
+
+Ordenado: sort(), reverse()
+
+Almacenamiento: clear(), copy()
+
+Indexado: [indice]
+
+Slicing: [inicio: fin: salto]
