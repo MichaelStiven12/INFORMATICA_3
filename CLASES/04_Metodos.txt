@@ -41,3 +41,20 @@ Almacenamiento: clear(), copy()
 Indexado: [indice]
 
 Slicing: [inicio: fin: salto]
+
+
+
+METODOS DE LOS DICCIONARIOS
+
+
+{
+    "hola": "hello,
+    "mundo": "world",
+    "profesor": "teacher"
+}
+
+Extraccion:     keys(), values(), get(<clave>) (mas seguro que el indexado, no arroja error si la clave no existe)
+Eliminar:       pop(<clave>)
+Almacenamiento: clear(), copy()
+Indexado:       diccionario[<clave>]
+
