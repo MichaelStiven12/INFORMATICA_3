@@ -154,12 +154,13 @@ print(lista6)
    * Remueva aquellos elementos cuyo valor es 0 o 1"""
 
 lista7 = edades.copy()
-print(lista7[0])
-print(lista7[-1])
-for elemento in lista7:
-   if elemento == 0 or elemento == 1:
-      lista7.remove(elemento)
-print(lista7)
+lista8 = []
+for i in lista7:
+   if(i == 0 or i == 1):
+      pass
+   else:
+      lista8.append(i)
+print(lista8)
  
 #==> EJERCICIO 5
 """  Utilice slicing para extraer a partir de la lista edades:
