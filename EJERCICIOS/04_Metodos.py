@@ -31,7 +31,7 @@ print(dir(tupla))
 
 diccionario = {1: "uno", 2: "dos", 3: "tres"}
 print(dir(diccionario))
-
+'''
 #==> EJERCICIO 1
 "A continuación se encuentra el poema el salmon"
 
@@ -67,11 +67,10 @@ PÁRRAFO 3: ABRIENDO SU BOCA, LO DEJA ESCAPAR, Y CORRIENTE ARRIBA, LO HA VISTO N
       - Desde la mitad hacia adelante
       - Todos pero al revés
       - Cada segundo elemento, pero al revés"""
-
-poema = """
-TÍTULO: EL SALMÓN
+'''
+poema = """TÍTULO: EL SALMÓN
 PÁRRAFO 1: DETRÁS DE UN SALMÓN, NADA UN TIBURÓN, LO CAZA EN ALASKA, CANSADOS LOS DOS. 
-PÁRRAFO 2: ASUSTADO GRITA: ¡NOOO! POR FAVOR,MI VIDA ES MUY CORTA, ¡MUESTRA COMPASIÓN!.
+PÁRRAFO 2: ASUSTADO GRITA: ¡NOOO! POR FAVOR, MI VIDA ES MUY CORTA, ¡MUESTRA COMPASIÓN!.
 PÁRRAFO 3: ABRIENDO SU BOCA, LO DEJA ESCAPAR, Y CORRIENTE ARRIBA, LO HA VISTO NADAR.
 """
 
@@ -83,13 +82,46 @@ poema = poema.replace("PÁRRAFO 3: ", "")
 poema = poema.lower()
 poema = poema.capitalize()
 
-poema = poema.replace(",", ",\n")
+poema = poema.replace(", ", ",\n")
 poema = poema.replace(".", ".\n")
-poema = poema.replace("El salmón", "El Salmón\n\n")
+poema = poema.replace("detrás", "Detrás")
+poema = poema.replace("asustado", "Asustado")
+poema = poema.replace("abriendo", "Abriendo")
+poema = poema.replace("El salmón", "El Salmón\n")
+poema = poema[0:9].center(50, " ") + "\n" + poema[9:len(poema)]
+a = poema.count("a")
+e = poema.count("e")
+i = poema.count("i")
+o = poema.count("o")
+u = poema.count("u")
+lineas = poema.count("\n")
+poema = poema.replace("salmón", "tiburón")
+poema = poema.replace("tiburón", "salmón")
+print("Poema: " + poema)
+print("Cantidad de a: " + str(a))
+print("Cantidad de e: " + str(e))
+print("Cantidad de i: " + str(i))
+print("Cantidad de o: " + str(o))
+print("Cantidad de u: " + str(u))
+print("Numero de lineas: " + str(lineas))
+print("Alfabetico: " + str(poema.isalpha()))
+print("Alfanumerico: " + str(poema.isalnum()))
+print("Digitos: " + str(poema.isdigit()))
+print("Decimal: " + str(poema.isdecimal()))
+print("Indice 0: " + poema[0])
+print("Indice 10: " + poema[10])
+print("Indice 100:" + poema[100])
+print("Ultimo indice: " + poema[-1])
+print("Indices pares:" + poema[0::2])
+print("Indices impares: " + poema[1::2])
+print("Desde el 20: " + poema[20::5])
+print("Desde el 4: " + poema[4:63:3])
+print("Desde la mitad: " + poema[len(poema)//2:])
+print("Hacia atras: " + poema[len(poema) - 1:0:-1])
+print("Hacia atras de a dos: " + poema[len(poema) - 1:0:-2])
 
-print(poema)
 '''
-
+'''
 #====================== EJERCICIOS MÉTODOS DE LISTAS ====================
 
 #==> EJERCICIO 1
@@ -178,4 +210,115 @@ print(edades[-1:0:-1])
 print(edades[10::70])
 print(edades[-1:0:-100])
 print(edades[int(len(edades)/2)::35])
+
+
+diccionario = {
+    1: "uno",
+    2: "dos",
+    3: "tres",
+    4: "cuatro",
+    5: "cinco"
+}
+
+print(diccionario.keys())
+print(diccionario.values())
+print(diccionario.get(2))
+diccionario.pop(1)
+'''
+
+#EJERCICIOS DE DICCIONARIOS   
+
+#==> EJERCICIO 1
+""" Cree el siguiente diccionario =>
+    Calificaciones = {"Juan": 5.0, "David": 2.4, "Maria": 2.9, "Esteban": 2.2, "Daniela": 2.0, "Mario": 3.1, "Juanita": 2.1, "José": 3.0, "Sebastian": 2.3, "Cristian": 2.0, "Alberto": 3.9, "Angélica": 4.2, "Angel": 2.0, "Marly": 2.5, "Mariana": 4.5, "Josefina": 2.7}
+     
+       a) Extraiga los keys y values del diccionario, almacenelos en las variables claves, valores, respectivamente
+       b) Corrija en el diccionario las calificaciones de Marly (4.3), Angel (3.1) y Juanita (3.5)
+       c) Elimine a les estudiantes Josefina y Juan.
+       d) Cree una copia y llamela reprobados, elimine todos aquellos con calificación mayor o igual a 3
+       e) Muestre en pantalla la mejor calificación, para ello utilice indexing
+       f) Muestre en pantalla la peor calificación, para ello utilice indexing 
+       g) Utilice indexing para agregar dos nuevos estudiantes: Marco(3.0) Alejandra(5.0)"""
+
+calificaciones = {"Juan": 5.0, "David": 2.4, "Maria": 2.9, "Esteban": 2.2, "Daniela": 2.0, "Mario": 3.1, "Juanita": 2.1, "José": 3.0, "Sebastian": 2.3, "Cristian": 2.0, "Alberto": 3.9, "Angélica": 4.2, "Angel": 2.0, "Marly": 2.5, "Mariana": 4.5, "Josefina": 2.7}
+
+claves = calificaciones.keys()
+valores  = calificaciones.values()
+
+calificaciones["Marly"] = 4.3
+calificaciones["Angel"] = 3.1
+calificaciones["Juanita"] = 3.5
+
+calificaciones.pop("Josefina")
+calificaciones.pop("Juan")
+
+reprobados = calificaciones.copy()
+
+for i in claves:
+   if reprobados[i] >= 3:
+      reprobados.pop(i)
+
+maxima = max(valores)
+print("La nota maxima es: " + str(list(valores)[list(valores).index(maxima)]))
+
+minima = min(valores)
+print("La nota minima es: " + str(list(valores)[list(valores).index(minima)]))
+
+calificaciones["Marco"] = 3.0
+calificaciones["Alejandra"] = 5.0
+
+print(calificaciones)
+print(reprobados)
+print(maxima)
+print(minima)
+
+#==> EJERCICIO 2
+""" Utilizando diccionarios cree una base de datos de empleados de una empresa,
+la base de datos se debe llamar empleadosMabe. Debe contener la siguiente información
+Cod   Nombre               Cargo          Salario   
+0001   Cristian Pachon     Ingeniero      $ 3.200.000
+0002   Daniela Pineda      Programador    $ 4.300.000
+0003   Esteban Murcia      Programador    $ 4.600.000
+0004   Jose Guzman         Ingeniero      $ 3.900.000
+0005   Camilo Rodriguez    Ensamblador    $ 1.200.000
+0006   Mariana Londoño     Ensamblador    $ 1.100.000
+0007   Estefania Muños     Ensamblador    $ 1.700.000
+0008   Cristian Rodriguez  Ingeniero      $ 3.100.000
+0009   Natalia Alzate      Ensamblador    $ 2.200.000
+0010   Juan Sanabria       Diseñador      $ 5.100.000
+0011   Juanita Calderon    Ensamblador    $ 1.300.000
+0012   Laura Quintero      Administrador  $ 2.500.000
+0013   Viviana Quesada     Guardia        $ 1.500.000
+A partir de la base de datos, busque una manera de:
+    a) Encontrar la persona con mayor salario
+    b) Encontrar la persona con menor salario
+    c) Calcular el gasto total de la empresa por motivo salarios
+    d) Calcular el promedio de lo que ganan los programadores
+    e) Calcular el promedio de lo que ganan los ensambladores"""
+
+
+empleadosMabe = {
+                  "0001": ["Cristian Pachon",  "Ingeniero", 3200000],
+                  "0002": ["Daniela Pineda",  "Programador", 4300000],
+                  "0003": ["Esteban Murcia",  "Programador", 4600000],
+                  "0004": ["Jose Guzman",  "Ingeniero", 3900000],
+                  "0005": ["Camilo Rodriguez",  "Ensamblador", 1200000],
+                  "0006": ["Mariana Londoño",  "Ensamblador", 1100000],
+                  "0007": ["Estefania Muños",  "Ensamblador", 1700000],
+                  "0008": ["Cristian Rodriguez",  "Ingeniero", 3100000],
+                  "0009": ["Natalia Alzate",  "Ensamblador", 2200000],
+                  "0010": ["Juan Sanabria",  "Diseñador", 5100000],
+                  "0011": ["Juanita Calderon",  "Ensamblador", 1300000],
+                  "0012": ["Laura Quintero",  "Administrador", 2500000],               
+                  "0013": ["Viviana Quesada",  "Guardia", 1500000]                
+}
+
+datos = empleadosMabe.values()
+salarios = []
+
+for i in datos:
+   salarios.append(i[2])
+
+salario_maximo = max(salarios)
+
 
