@@ -1,0 +1,17 @@
+22 - 03 - 2023
+
+FUNCIONES
+
+Son una solución al paradigma de programación funcional.
+
+Se crean para evitar la repetición de código.
+
+
+SINTAXIS
+
+def <nombre de la funcion>(<parametros>){
+    <sentencias>
+    return <elemento a retornar>
+}
+
+Los nombres de las funciones se escriben en minusculas por convensión.
