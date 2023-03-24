@@ -2,11 +2,10 @@
 '''
 cadena = "hola"
 
-print(dir(cadena))
 print(cadena.upper())
 print(cadena.lower())
 print(cadena.center(50, "-"))
-print(cadena.strip("       hola  "))
+
 
 cadena1 = "Michael Stiven Valencia Mora"
 
@@ -240,7 +239,9 @@ diccionario.pop(1)
        f) Muestre en pantalla la peor calificación, para ello utilice indexing 
        g) Utilice indexing para agregar dos nuevos estudiantes: Marco(3.0) Alejandra(5.0)"""
 
-calificaciones = {"Juan": 5.0, "David": 2.4, "Maria": 2.9, "Esteban": 2.2, "Daniela": 2.0, "Mario": 3.1, "Juanita": 2.1, "José": 3.0, "Sebastian": 2.3, "Cristian": 2.0, "Alberto": 3.9, "Angélica": 4.2, "Angel": 2.0, "Marly": 2.5, "Mariana": 4.5, "Josefina": 2.7}
+calificaciones = {"Juan": 5.0, "David": 2.4, "Maria": 2.9, "Esteban": 2.2, "Daniela": 2.0, 
+                  "Mario": 3.1, "Juanita": 2.1, "José": 3.0, "Sebastian": 2.3, "Cristian": 2.0, 
+                  "Alberto": 3.9, "Angélica": 4.2, "Angel": 2.0, "Marly": 2.5, "Mariana": 4.5, "Josefina": 2.7}
 
 claves = calificaciones.keys()
 valores  = calificaciones.values()
@@ -251,6 +252,10 @@ calificaciones["Juanita"] = 3.5
 
 calificaciones.pop("Josefina")
 calificaciones.pop("Juan")
+
+print(valores)
+print(claves)
+print(calificaciones)
 
 reprobados = calificaciones.copy()
 

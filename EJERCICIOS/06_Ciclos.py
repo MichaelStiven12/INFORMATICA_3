@@ -112,3 +112,9 @@ Donde "A" es alto, "B" aceptable  y "C"  insuficiente. Determine:
 
 
 
+iterable = range(0,10)
+
+for numero in iterable:
+    print(numero)
+
+    

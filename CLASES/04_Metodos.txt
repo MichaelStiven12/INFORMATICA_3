@@ -38,9 +38,9 @@ Ordenado: sort(), reverse()
 
 Almacenamiento: clear(), copy()
 
-Indexado: [indice]
+Indexado: objeto[indice]
 
-Slicing: [inicio: fin: salto]
+Slicing: objeto[inicio: fin: salto]
 
 
 

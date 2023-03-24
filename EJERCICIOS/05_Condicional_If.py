@@ -19,4 +19,9 @@ las claves deben ser los nombres de los estudiantes (en strings)
 y los valores deben ser el dinero total que pagó cada uno al terminar la semana (en flotantes)
 """
 
+edad = 22
 
+if(edad >= 18):
+    print("Usted es mayor de edad")
+else:
+    print("Usted es menor de edad")

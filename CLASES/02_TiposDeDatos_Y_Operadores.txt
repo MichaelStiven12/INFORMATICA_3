@@ -4,15 +4,15 @@ TIPOS DE DATOS:
 
 BASICOS:
 
-String:         "" '' "Hola mundo" "1234"
-Enteros:        3 1 -512 2451
-Flotantes:      2.4 124.5 -12.5
-Booleanos:      True False
+String:         "", '', "Hola mundo", "1234"
+Enteros:        3, 1, -512 2451
+Flotantes:      2.4, 124.5, -12.5
+Booleanos:      True, False
 
 ESTRUCTURADOS:
 
-Listas:         [1,2,3] ["a", "b", "c"]
-Tuplas:         (1,2,3) ("a", "b", "c")
+Listas:         [1,2,3], ["a", "b", "c"]
+Tuplas:         (1,2,3), ("a", "b", "c")
 Diccionarios:   {"nombre": "Michael", "apellido": "Valencia", "edad": 22}
 Conjuntos:      {"A", "B", "C", "D"} (a diferencia de los diccionarios estos solo tienen elementos independientes)
 
