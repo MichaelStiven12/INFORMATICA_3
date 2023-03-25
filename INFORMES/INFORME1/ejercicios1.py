@@ -62,7 +62,7 @@ diccionarioPagos = {
                     "Gisell": 0,
                     "Cristian": 0
 }
-nofue = []
+
 fue = []
 for j in range(0,2):
     for i in range(0,5):
@@ -72,7 +72,7 @@ for j in range(0,2):
                 fue[len(fue) - 1].append("Si")
             else:
                 fue[len(fue) - 1].append("No")
-precio = 0
+
 for elemento in fue:
     for i in range(0,10):
         if elemento[i] == "Si":
@@ -82,7 +82,6 @@ for elemento in fue:
 
 for estudiante in diccionarioPagos.keys():
     diccionarioPagos[estudiante] = round(diccionarioPagos[estudiante],2)
-
 
 #Ejercicio 3
 
