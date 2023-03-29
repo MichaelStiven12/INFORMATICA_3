@@ -1,0 +1,49 @@
+29 - 03 - 2023
+
+Estructuras de analisis de datos:
+
+- Arreglos Numpy: 1-D => numpy.array([1,2,3,4])
+                  2-D => numpy.array([1,2,3],
+                                     [4,5,6],
+                                     [7,8,9])
+                  3-D => numpy.array([[1,2],
+                                      [3,4]],
+                                      [[5,6],
+                                      [7,8]])
+
+Con estos arreglos se puede hacer: reshape()
+                                   sum()
+                                   etc.
+
+
+- Pandas: - pandas.series() => Estructura que le asigna un indice a cada valor, es 1-D y combina listas con diccionarios, se puede acceder a estos valores ya sea por el indice o por la clave.
+                               Metodos:
+                                        mean()
+                                        median()
+                                        std()
+                                        var()
+                                        describe()
+
+                                Los arreglos forman series y las series forman dataframes.
+
+          - pandas.DataFrame() => Utiliza etiquetas para las columnas e indices para las filas.
+                                Metodos:
+                                         describe()
+                                         indexado => [indice, columna]
+                                         slicing => [indice, columna]
+
+
+CONSTRUCTORES DE LAS ESTRUCTURAS DE DATOS:
+
+Arreglos => 1-D => numpy.array(lista_1D)
+                   numpy.array(rango)
+
+            2-D => numpy.array(lista_2D)
+
+            3-D => numpy.array(lista_3D)
+
+
+Series => Solo existen en 1-D => pandas.Series(data = lista o arreglo numpy, indices = lista o arreglo numpy que contiene los indices), en el que ambos parametros deben ser del mismo tamaño.
+          
+Dataframes => Solo existen en 2-D => pandas.DataFrame(data = arreglo numpy o iterable 2-D, indices = arreglo numpy o iterable 2-D con los nombres de las filas, columnas = Lista o arreglo numpy con los nombres de las columnas).
+
