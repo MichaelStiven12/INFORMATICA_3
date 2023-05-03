@@ -1,0 +1,29 @@
+14 - 04 - 2023
+
+¿QUE ES SIMULACIÓN?
+
+Sinonimos: Calcular, Resolver, Modelar, Implementar, Tecnificar.
+
+Según Wikipedia:
+
+"La simulación es el proceso de diseñar un modelo de un sistema real y llevar a termino de experiencias con el,
+con la finalidad de comprender el comportamiento del sistema o evaluar nuevas estrategias -dentro de los limites
+impuestos por un cierto criterio o un conjunto de ellos- para el funcionamiento del sistema".
+
+En palabras del docente:
+
+Es el proceso necesario en el cual se usa un modelo, una ecuación, una técnica para conocer el comportamiento de un FENOMENO ALEATORIO.
+
+* Distribución de los espines en un material magnético.
+* La posibilidad de absorber un fotón y convertirlo en electron.
+* El resultado de lanzar un dado.
+* El comportamiento del clima.
+
+¿QUE SIMULAREMOS?
+
+* Materiales magneticos madiante la técnica montecarlo.
+* Rendimiento de una celda solar unión pn.
+* Movimiento de las párticulas con algoritmos verlet.
+
+nota: Se puede simular utilizando un software ya existente o con nuestro propio código en python.
+

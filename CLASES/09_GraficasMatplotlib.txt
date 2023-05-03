@@ -1,0 +1,44 @@
+12 - 04 - 2023
+
+GRAFICAS MATPLOTLIB
+
+- Dispersion de puntos
+- Histogramas
+- Diagrama de barras
+- Pastel
+- Boxplot
+
+Para importar la libreria se utiliza el comando:
+
+import matplotlib.pyplot as pyplot
+
+- Dispersion de puntos
+
+plt.figure()
+plt.plot(<xdata>, <ydata>, <style>)
+plt.show()
+
+- Histograma
+
+plt.figure()
+plt.hist(<data>, bins = 10 (numero de columnas), density = True)
+plt.show()
+
+- Diagrama de barras (variables cualitativas)
+
+plt.figure()
+plt.bar(<clases>, <frecuencias>)
+plt.show()
+
+- Pastel (variables cualitativas)
+
+plt.figure()
+plt.pie(<frecuencias>, <clases>)
+plt.show()
+
+- Boxplot (variables cuantitativas)
+
+plt.figure()
+plt.boxplot(<data>)
+plt.show()
+
