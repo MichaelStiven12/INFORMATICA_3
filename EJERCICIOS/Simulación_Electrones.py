@@ -6,15 +6,15 @@ k = 1
 r = 1
 T = 0.01
 q = 1
-e_out = 10
-e_in = 30
+e_out = 50
+e_in = 100
 
 def crear_Estado_Inicial():
     angulo = 6.28/e_out
     x_out = [r*np.cos(ang) for ang in np.arange(0, 6.28, angulo)]
     y_out = [r*np.sin(ang) for ang in np.arange(0, 6.28, angulo)]
-    x_in = [np.random.random() - 0.5 for i in range(e_in)]
-    y_in = [np.random.random() - 0.5 for i in range(e_in)]
+    x_in = [np.random.random()*3 - 1.5 for i in range(e_in)]
+    y_in = [np.random.random()*3 - 1.5 for i in range(e_in)]
     return x_out,y_out,x_in,y_in
 
 def dibujar_sistema(x_out,y_out,x_in,y_in):
@@ -64,16 +64,17 @@ def metropolis():
         pass
     else:
         r_in[posicion] = old_r
-        r[posicion + len(r_out)] = new_r
+        r[posicion + len(r_out)] = old_r
     
 def monte_carlo_step():
     for i in range(len(r_in)):
         metropolis()
 print(calcular_energia_total())
-amount_mcs = 100
+amount_mcs = 1000
 energies = np.zeros(shape = amount_mcs)
 for i in range(amount_mcs):
     monte_carlo_step()
+
 
 newx_in = []
 newy_in = []
