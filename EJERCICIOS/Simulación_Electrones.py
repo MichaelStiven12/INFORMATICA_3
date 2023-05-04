@@ -6,8 +6,8 @@ k = 1
 r = 1
 T = 0.01
 q = 1
-e_out = 50
-e_in = 100
+e_out = 10
+e_in = 10
 
 def crear_Estado_Inicial():
     angulo = 6.28/e_out
@@ -63,12 +63,16 @@ def metropolis():
     if deltaE <= 0:
         pass
     else:
-        r_in[posicion] = old_r
-        r[posicion + len(r_out)] = old_r
+        if np.random.uniform(0, 1) <= np.exp(-deltaE/(k*T)):
+            pass
+        else:
+            r_in[posicion] = old_r
+            r[posicion + len(r_out)] = old_r
     
 def monte_carlo_step():
     for i in range(len(r_in)):
         metropolis()
+
 print(calcular_energia_total())
 amount_mcs = 100
 energies = np.zeros(shape = amount_mcs)

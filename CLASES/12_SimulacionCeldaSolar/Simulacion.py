@@ -69,7 +69,7 @@ v_0c = voltage[corte][0]
 j_sc = jcell[0]
 ff = p_mpp/(j_sc*v_0c)
 n = p_mpp/P_inc
-
+print(j_sc)
 print("Potencia maxima de la celda: ", p_mpp)
 print("Factor de llenado de la celda", ff)
 print("Eficiencia de la celda:", n)
