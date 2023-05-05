@@ -14,7 +14,7 @@ import warnings
 
 
 #Download the solar spectrum
-spectrum = pd.read_csv('CLASES/12_SimulacionCeldaSolar/12_data.csv', header=0, delimiter=';', decimal = ",")
+spectrum = pd.read_csv("INFORMES\INFORME2\Simulacion _Celda/12_data.csv", header=0, delimiter=';', decimal = ",")
 
 #We choose the AM1.5G spectrum
 lamb  = np.array(spectrum.loc[(spectrum['Wvlgth nm'] <= 1107.0), 'Wvlgth nm'])  # nm

@@ -55,7 +55,7 @@ voltage = np.arange(0, 1, 0.01)
 jcell = np.zeros(shape = 100)
 
 for valor in range(len(voltage)):
-    jcell[valor] = simulation(voltage[valor])
+    jcell[valor] = simulation(voltage[valor])*(10**3)
 
 potencia = jcell*voltage
 
@@ -82,7 +82,7 @@ plt.xlabel("V [Voltios]")
 plt.legend(["Densidad de corriente"], loc = "upper left")
 plt.xlim(0, 0.7)
 plt.ylim(0, 0.05)
-plt.yticks([0.00, 0.01, 0.02, 0.03, j_mpp, j_sc, 0.05], ["0.00", "0.01", "0.02", "0.03", "j_mpp", "j_sc", "0.05"])
+plt.yticks([0, 10, 20, 30, j_mpp, j_sc, 50], ["0", "10", "20", "30", "j_mpp", "j_sc", "50"])
 plt.xticks([0.0, 0.1, 0.2, 0.3, v_mpp, 0.5, 0.536, 0.6, 0.7],["0.0", "0.1", "0.2", "0.3", "v_mpp", "0.5", "v_0c", "0.6", "0.7"])
 plt.plot([0, v_mpp], [j_mpp, j_mpp], color = "black", linestyle = "dashed")
 plt.plot([v_mpp, v_mpp], [0, j_mpp], color = "black", linestyle = "dashed")
@@ -92,7 +92,7 @@ otro_y.plot(voltage, potencia, color = "red")
 otro_y.set_ylabel("P [W/cm^2]")
 otro_y.set_xlim(0, 0.7)
 otro_y.set_ylim(0, 0.02)
-otro_y.set_yticks([0.0000, 0.0025, 0.0050, 0.0075, 0.0100, 0.0125, 0.0150, maxima_p, 0.0175, 0.0200], ["0.0000", "0.0025", "0.0050", "0.0075", "0.0100", "0.0125", "0.0150", "P_max", "0.0175", "0.0200"])
+otro_y.set_yticks([0, 2.5, 5.0, 7.5, 10.0, 12.5, 15, maxima_p, 17.5, 20], ["0", "2.5", "5", "7.5", "10", "12.5", "15", "P_max", "17.5", "20"])
 otro_y.plot([v_mpp, 0.7], [maxima_p, maxima_p], color = "black", linestyle = "dashed")
 otro_y.plot([v_mpp], [maxima_p], color = "black", marker = "o")
 otro_y.legend(["Potencia"])
