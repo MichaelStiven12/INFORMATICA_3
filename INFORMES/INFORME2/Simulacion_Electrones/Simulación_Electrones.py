@@ -6,18 +6,17 @@ k = 1
 r = 1
 T = 0.01
 q = 1
-e_out = 10
-e_in = 10
-
+e_out = 20
+e_in = 20
 def crear_Estado_Inicial():
     angulo = 6.28/e_out
     x_out = [r*np.cos(ang) for ang in np.arange(0, 6.28, angulo)]
     y_out = [r*np.sin(ang) for ang in np.arange(0, 6.28, angulo)]
-    x_in = [np.random.random()*3 - 1.5 for i in range(e_in)]
-    y_in = [np.random.random()*3 - 1.5 for i in range(e_in)]
+    x_in = [np.random.random() - 0.5 for i in range(e_in)]
+    y_in = [np.random.random() - 0.5 for i in range(e_in)]
     return x_out,y_out,x_in,y_in
 
-def dibujar_sistema(x_out,y_out,x_in,y_in):
+def dibujar_sistema_inicial(x_out,y_out,x_in,y_in):
     plt.figure()
     plt.plot(x_out,y_out, "ro")
     plt.plot(x_in, y_in, "bo")
@@ -25,10 +24,22 @@ def dibujar_sistema(x_out,y_out,x_in,y_in):
     plt.xlim(-1.5, 1.5)
     plt.ylim(-1.5, 1.5)
     plt.grid()
+    plt.savefig("INFORMES/INFORME2/Simulacion_Electrones/Estado_Inicial.png")
+    plt.show()
+
+def dibujar_sistema_final(x_out,y_out,x_in,y_in):
+    plt.figure()
+    plt.plot(x_out,y_out, "ro")
+    plt.plot(x_in, y_in, "bo")
+    plt.gca().set_aspect("equal")
+    plt.xlim(-1.5, 1.5)
+    plt.ylim(-1.5, 1.5)
+    plt.grid()
+    plt.savefig("INFORMES/INFORME2/Simulacion_Electrones/Estado_Final.png")
     plt.show()
 
 x_out,y_out, x_in,y_in = crear_Estado_Inicial()
-dibujar_sistema(x_out,y_out,x_in,y_in)
+dibujar_sistema_inicial(x_out, y_out, x_in, y_in)
 
 r=[]
 for i in range(len(x_out)):
@@ -55,7 +66,7 @@ def metropolis():
     posicion = np.random.choice(range(len(r_in)))
     old_r = r_in[posicion]
     old_E = calcular_energia_total()
-    new_r = [np.random.random()*3 - 1.5, np.random.random()*3 - 1.5]
+    new_r = [old_r[0] + (np.random.random()*0.0625 - 0.03125), old_r[1] + (np.random.random()*0.0625 - 0.03125)] #Cambiando el rango de movimiento de cada electron se puede lograr que mas electrones queden dentro del circulo al final de la simulación.
     r_in[posicion] = new_r
     r[posicion + len(r_out)] = new_r
     new_E = calcular_energia_total()
@@ -68,17 +79,15 @@ def metropolis():
         else:
             r_in[posicion] = old_r
             r[posicion + len(r_out)] = old_r
-    
+
 def monte_carlo_step():
     for i in range(len(r_in)):
         metropolis()
 
-print(calcular_energia_total())
-amount_mcs = 100
+amount_mcs = 30000
 energies = np.zeros(shape = amount_mcs)
 for i in range(amount_mcs): 
     monte_carlo_step()
-
 
 newx_in = []
 newy_in = []
@@ -86,5 +95,4 @@ for punto in r_in:
     newx_in.append(punto[0])
     newy_in.append(punto[1])
 
-dibujar_sistema(x_out, y_out, newx_in, newy_in)
-print(calcular_energia_total())
+dibujar_sistema_final(x_out, y_out, newx_in, newy_in)
