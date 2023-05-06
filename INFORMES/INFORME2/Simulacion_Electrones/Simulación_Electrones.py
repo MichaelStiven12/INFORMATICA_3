@@ -7,7 +7,7 @@ r = 1
 T = 0.01
 q = 1
 e_out = 20
-e_in = 20
+e_in = 25
 def crear_Estado_Inicial():
     angulo = 6.28/e_out
     x_out = [r*np.cos(ang) for ang in np.arange(0, 6.28, angulo)]
@@ -18,6 +18,7 @@ def crear_Estado_Inicial():
 
 def dibujar_sistema_inicial(x_out,y_out,x_in,y_in):
     plt.figure()
+    plt.title("20 electrones externos, 25 internos y 50000 iteraciones.")
     plt.plot(x_out,y_out, "ro")
     plt.plot(x_in, y_in, "bo")
     plt.gca().set_aspect("equal")
@@ -29,6 +30,7 @@ def dibujar_sistema_inicial(x_out,y_out,x_in,y_in):
 
 def dibujar_sistema_final(x_out,y_out,x_in,y_in):
     plt.figure()
+    plt.title("20 electrones externos, 25 internos y 50000 iteraciones.")
     plt.plot(x_out,y_out, "ro")
     plt.plot(x_in, y_in, "bo")
     plt.gca().set_aspect("equal")
@@ -84,7 +86,7 @@ def monte_carlo_step():
     for i in range(len(r_in)):
         metropolis()
 
-amount_mcs = 30000
+amount_mcs = 50000
 energies = np.zeros(shape = amount_mcs)
 for i in range(amount_mcs): 
     monte_carlo_step()
