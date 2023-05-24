@@ -86,7 +86,7 @@ def monte_carlo_step():
     for i in range(len(r_in)):
         metropolis()
 
-amount_mcs = 50000
+amount_mcs = 100
 energies = np.zeros(shape = amount_mcs)
 for i in range(amount_mcs): 
     monte_carlo_step()
